@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Venda de put na B3</title>
+<style>
+  :root{--fundo:#0f1115;--caixa:#171a21;--linha:#242832;--texto:#e6e8ee;--fraco:#9aa1b1;
+        --verde:#3fb27f;--amarelo:#d9a441;--vermelho:#d9534f;--azul:#5b8def}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fundo);color:var(--texto);
+       font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  [hidden]{display:none!important}
+  #trava{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+  #trava .cartao{background:var(--caixa);border:1px solid var(--linha);border-radius:12px;
+                 padding:28px;max-width:420px;width:100%}
+  #trava h1{margin:0 0 6px;font-size:20px}
+  #trava p{margin:0 0 18px;color:var(--fraco);font-size:14px}
+  input,button{font:inherit}
+  input{width:100%;padding:11px 12px;border-radius:8px;border:1px solid var(--linha);
+        background:#0c0e13;color:var(--texto);letter-spacing:.08em;text-transform:uppercase}
+  button{margin-top:12px;width:100%;padding:11px;border:0;border-radius:8px;background:var(--azul);
+         color:#fff;font-weight:600;cursor:pointer}
+  button:disabled{opacity:.6;cursor:progress}
+  #recado{margin-top:12px;color:var(--vermelho);font-size:14px;min-height:20px}
+  header{padding:18px 20px;border-bottom:1px solid var(--linha);display:flex;gap:16px;
+         align-items:baseline;flex-wrap:wrap}
+  header h1{font-size:18px;margin:0}
+  header .data{color:var(--fraco);font-size:14px}
+  nav{display:flex;gap:4px;padding:0 12px;border-bottom:1px solid var(--linha);flex-wrap:wrap}
+  nav button{width:auto;margin:0;background:none;color:var(--fraco);padding:12px 14px;
+             border-bottom:2px solid transparent;border-radius:0;font-weight:500}
+  nav button.ativa{color:var(--texto);border-bottom-color:var(--azul)}
+  main{padding:20px;max-width:100%;overflow-x:auto}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th,td{padding:7px 10px;border-bottom:1px solid var(--linha);text-align:right;white-space:nowrap}
+  th:first-child,td:first-child,th.txt,td.txt{text-align:left}
+  th{position:sticky;top:0;background:var(--caixa);color:var(--fraco);font-weight:600;cursor:pointer}
+  tbody tr:hover{background:#1b1f28}
+  .verde{color:var(--verde)}.amarelo{color:var(--amarelo)}.vermelho{color:var(--vermelho)}
+  .ferramentas{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+  .ferramentas input,.ferramentas select{width:auto;text-transform:none;letter-spacing:normal}
+  .cartoes{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+  .cartao{background:var(--caixa);border:1px solid var(--linha);border-radius:10px;padding:14px}
+  .cartao h3{margin:0 0 8px;font-size:15px}
+  .cartao ul{margin:6px 0 0;padding-left:18px;color:var(--fraco);font-size:13px}
+  .aviso{margin:18px 20px;padding:12px 14px;border:1px solid var(--linha);border-radius:8px;
+         color:var(--fraco);font-size:13px}
+  .vazio{color:var(--fraco);padding:16px 0}
+</style>
+</head>
+<body>
+<div id="trava">
+  <form class="cartao" id="forma">
+    <h1>Venda de put na B3</h1>
+    <p>Esta página guarda o conteúdo cifrado. Informe a senha para abrir.</p>
+    <input id="senha" type="password" autocomplete="current-password" spellcheck="false"
+           placeholder="XXXX-XXXX-XXXX-XXXX" required>
+    <button id="entrar" type="submit">Abrir</button>
+    <div id="recado" role="alert"></div>
+  </form>
+</div>
+<div id="painel" hidden>
+  <header><h1>Venda de put na B3</h1><span class="data" id="cabecalho"></span></header>
+  <nav id="abas"></nav>
+  <main id="conteudo"></main>
+  <div class="aviso" id="rodape"></div>
+</div>
+<script src="dados.js"></script>
+<script src="painel.js"></script>
+</body>
+</html>
