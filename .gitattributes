@@ -1,0 +1,2 @@
+# a pagina publicada fica em LF, para o arquivo no disco bater com o que o servidor devolve
+* text eol=lf
